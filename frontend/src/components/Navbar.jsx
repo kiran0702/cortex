@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { User, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/60 backdrop-blur-xl shadow-sm border-b border-black/5"
-          : "bg-transparent backdrop-blur-sm"
+        ? "bg-white/60 backdrop-blur-xl shadow-sm border-b border-black/5"
+        : "bg-transparent backdrop-blur-sm"
         }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ const Navbar = () => {
           </ul>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-3">           
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
 
             <Link to="/get-early-access">
               <button className="relative overflow-hidden group rounded-full bg-linear-to-r from-orange-500 to-orange-600 px-5 xl:px-6 py-2 xl:py-2.5 text-sm xl:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300">
@@ -94,15 +94,6 @@ const Navbar = () => {
 
           {/* Mobile Icons & Burger */}
           <div className="flex lg:hidden items-center gap-3">
-            <Link
-              to="/account"
-              className="p-2 rounded-full hover:bg-orange-100 transition-all duration-200"
-              aria-label="Account"
-            >
-              <User className="h-5 w-5 text-gray-700" />
-            </Link>
-
-
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg hover:bg-orange-100 transition-colors relative z-50"
